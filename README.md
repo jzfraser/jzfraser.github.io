@@ -7,7 +7,5 @@ I plan on hosting it using GitHub pages at that point.
 # Made With
 
 - Vite
-- TypeScript
-- React
+- TypeScript + React
 - React-Bootstrap
-- Font-Awesome
