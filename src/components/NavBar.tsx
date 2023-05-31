@@ -12,7 +12,7 @@ function removeLeadingSlash(s: string): string {
 type Link = {
   name: string;
   to: string;
-  variant?: "lg-gradient";
+  variant?: "initials";
 };
 
 const links: Link[] = [
@@ -27,7 +27,7 @@ const links: Link[] = [
   {
     name: "jf",
     to: "/home",
-    variant: "lg-gradient",
+    variant: "initials",
   },
   {
     name: "skills",
@@ -45,15 +45,16 @@ export function NavBar() {
     pathname === "/" ? "home" : removeLeadingSlash(pathname)
   );
 
-  console.log(isActive);
-
   return (
     <Nav className="nav">
       {links.map((link, index) => {
+        const linkClassNames = `navlink ${
+          isActive === link.name ? "active" : ""
+        } ${link.variant ? link.variant : ""}`;
         return (
           <Link
             key={index}
-            className={`navlink ${isActive === link.name ? "active" : ""}`}
+            className={linkClassNames}
             to={link.to}
             onClick={() => setIsActive(removeLeadingSlash(link.to))}
           >
