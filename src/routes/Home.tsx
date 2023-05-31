@@ -1,26 +1,48 @@
 import "../styles/Home.scss";
 
+import {
+  GitHub,
+  Keyboard,
+  Language,
+  LinkedIn,
+  SportsEsports,
+  Wifi,
+} from "@mui/icons-material";
 import { Col, Container, Row } from "react-bootstrap";
 
-import { BioBullet } from "../components/BioBullet";
+import { BioBullet, BioBulletProps } from "../components/BioBullet";
+import { SocialLink, SocialLinkProps } from "../components/SocialLink";
 import me from "../img/Me.png";
 
-const bioBullets = [
+const bioBullets: BioBulletProps[] = [
   {
-    emoji: "⌨️",
+    icon: <Keyboard />,
     text: "Lover of Vi, Vim, and especially Neovim",
   },
   {
-    emoji: "👨‍💻",
+    icon: <Wifi />,
     text: "Remote worker extraordinaire",
   },
   {
-    emoji: "🎮",
-    text: "Enjoyer of video games",
+    icon: <Language />,
+    text: "Fluent in German",
   },
   {
-    emoji: "🇩🇪",
-    text: "Fluent in German",
+    icon: <SportsEsports />,
+    text: "Play a wide variety of video games",
+  },
+];
+
+const socialLinks: SocialLinkProps[] = [
+  {
+    icon: <GitHub fontSize="large" />,
+    to: "https://github.com/jzfraser",
+    label: "github",
+  },
+  {
+    icon: <LinkedIn fontSize="large" />,
+    to: "https://www.linkedin.com/in/jack-f-031a87210/",
+    label: "linkedin",
   },
 ];
 
@@ -45,11 +67,21 @@ export function Home() {
                 {bioBullets.map((bullet, index) => (
                   <BioBullet
                     key={index}
-                    emoji={bullet.emoji}
+                    icon={bullet.icon}
                     text={bullet.text}
                   />
                 ))}
               </div>
+              <Row>
+                {socialLinks.map((link, index) => (
+                  <SocialLink
+                    key={index}
+                    icon={link.icon}
+                    to={link.to}
+                    label={link.label}
+                  />
+                ))}
+              </Row>
             </div>
           </div>
         </Col>

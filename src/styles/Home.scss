@@ -47,10 +47,20 @@
 .bio {
   text-align: left;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .bio-bullet {
   margin-right: 0.75rem;
+  color: $lightBlue;
+}
+
+.social-icon {
+  color: white;
+
+  &:hover {
+    color: $lightBlue;
+  }
 }
 
 .handwave {
