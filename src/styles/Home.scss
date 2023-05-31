@@ -1,40 +1,10 @@
-.about-block {
+@import "../App";
+
+.home-contents {
   margin: 2rem;
   padding: 1rem;
-}
-
-.about-contents {
   text-align: left;
   color: white;
-}
-
-.nav {
-  justify-content: center;
-  align-items: center;
-}
-
-.navlink {
-  color: white;
-  font-size: 1rem;
-  transition: all 250ms ease;
-  margin-left: 1rem;
-  margin-right: 1rem;
-
-  &:hover {
-    color: rgb(20, 177, 254);
-    transform: scale(1.3);
-    transition: all 250ms ease;
-  }
-}
-
-.initials {
-  background: -webkit-linear-gradient(
-    -45deg,
-    rgb(20, 177, 255),
-    rgb(182, 56, 255)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .handwave {

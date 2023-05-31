@@ -1,0 +1,13 @@
+$darkGray: rgb(41, 41, 41);
+$transition: all 250ms ease;
+$gradient: -webkit-linear-gradient(
+  -45deg,
+  rgb(20, 177, 255),
+  rgb(182, 56, 255)
+);
+
+.gradient-text {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,17 @@
+@import "./App";
+
+body {
+  background-color: $darkGray;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 1.5vh;
+  width: 100%;
+  height: 100%;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}

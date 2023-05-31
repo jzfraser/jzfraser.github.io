@@ -1,3 +1,3 @@
 export function Skills() {
-  return null;
+  return <div></div>;
 }
