@@ -14,6 +14,16 @@ import { Avatar } from "../components/Avatar";
 import { MiniBio } from "../components/MiniBio";
 import me from "../img/Me.png";
 
+const intro = (
+  <>
+    <h1>
+      Hi, I'm <span className="gradient-text">Jack</span>{" "}
+      <span className="handwave">👋</span>
+    </h1>
+    <h2>I do Full Stack Dev and more.</h2>
+  </>
+);
+
 const miniBioBullets = [
   {
     icon: <Keyboard />,
@@ -47,16 +57,6 @@ const socialLinks = [
 ];
 
 export function Home() {
-  const intro = (
-    <>
-      <h1>
-        Hi, I'm <span className="gradient-text">Jack</span>{" "}
-        <span className="handwave">👋</span>
-      </h1>
-      <h2>I do Full Stack Dev and more.</h2>
-    </>
-  );
-
   return (
     <Container className="home">
       <Row>

@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ErrorPage } from "./components/ErrorPage";
 import { About } from "./routes/About";
 import { Home } from "./routes/Home";
-import { Pets } from "./routes/Pets";
+import { PetBios } from "./routes/Pets";
 import { Projects } from "./routes/Projects";
 import { Root } from "./routes/Root";
 
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/pets",
-        element: <Pets />,
+        element: <PetBios />,
       },
       {
         path: "/projects",
