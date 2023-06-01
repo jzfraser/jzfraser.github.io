@@ -1,6 +1,11 @@
-$darkGray: rgb(41, 41, 41);
+$darkGray: rgb(31, 31, 31);
+$lightGray: rgb(64, 64, 64);
 $lightBlue: rgb(20, 177, 254);
+$lightGreen: rgb(187, 135, 255);
+
+$pageContentHeight: calc(100vh - 175px);
 $transition: all 250ms ease;
+$boxShadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 $gradient: -webkit-linear-gradient(
   -45deg,
   rgb(20, 177, 255),

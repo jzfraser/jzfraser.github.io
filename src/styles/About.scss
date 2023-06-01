@@ -1,0 +1,79 @@
+@import "../App";
+
+.about {
+  min-height: $pageContentHeight;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  img {
+    width: 5vh;
+    height: 5vh;
+  }
+
+  a {
+    color: $lightBlue;
+  }
+}
+
+.divider {
+  border: 3px solid;
+  border-image-slice: 1;
+  border-image-source: $gradient;
+  margin-bottom: 1rem;
+  margin-left: 10px;
+}
+
+.about-section {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.icon-bundle {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(29, 33, 43);
+  box-shadow: $boxShadow;
+  width: 100%;
+
+  @media only screen and (min-width: 991px) {
+    width: 85%;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    width: 60%;
+  }
+}
+
+.icons {
+  row-gap: 1rem;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-attr {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 1rem;
+}

@@ -1,5 +1,7 @@
+@import "../App";
+
 .pets {
-  min-height: calc(100vh - 175px);
+  min-height: $pageContentHeight;
   display: flex;
   flex-direction: column;
   align-items: center;

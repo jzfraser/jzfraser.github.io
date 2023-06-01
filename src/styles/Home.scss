@@ -1,7 +1,7 @@
 @import "../App";
 
 .home {
-  min-height: calc(100vh - 175px);
+  min-height: $pageContentHeight;
   display: flex;
   align-items: center;
   justify-content: center;
