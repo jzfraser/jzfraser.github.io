@@ -16,7 +16,7 @@ const meowBullets = [
   },
   {
     icon: <Favorite />,
-    text: "Hobbies: sunbathing, screaming, angry looks",
+    text: "Hobbies: sunbathing, screaming, anger",
   },
   {
     icon: <Favorite />,
@@ -32,7 +32,7 @@ const woofBullets = [
   },
   {
     icon: <Pets />,
-    text: "Hobbies: eating 'chewies', sleeping ",
+    text: "Hobbies: eating 'chewies', sleeping, love",
   },
   {
     icon: <Pets />,
@@ -42,20 +42,25 @@ const woofBullets = [
 
 export function PetBios() {
   return (
-    <Container className="pets-container">
+    <Container className="pets">
       <Row>
-        <Col>
+        <Col lg>
           <Avatar imgSrc={meow} />
         </Col>
-        <Col>
+        <Col lg>
           <MiniBio intro={meowIntro} miniBioBullets={meowBullets} />
         </Col>
       </Row>
       <Row>
-        <Col xs={{ order: 2 }} sm={{ order: 2 }} md={{ order: 1 }}>
+        <Col
+          xs={{ order: "last" }}
+          sm={{ order: "last" }}
+          md={{ order: "last" }}
+          lg={{ span: "auto", order: "first" }}
+        >
           <MiniBio intro={woofIntro} miniBioBullets={woofBullets} />
         </Col>
-        <Col xs={{ order: 1 }} sm={{ order: 1 }} md={{ order: 2 }}>
+        <Col lg>
           <Avatar imgSrc={woof} />
         </Col>
       </Row>

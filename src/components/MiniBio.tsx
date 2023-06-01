@@ -1,7 +1,7 @@
 import "../styles/MiniBio.scss";
 
 import { ReactNode } from "react";
-import { Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 import { MiniBioBullet, MiniBioBulletProps } from "./BioBullet";
 import { SocialLink, SocialLinkProps } from "./SocialLink";
@@ -23,14 +23,16 @@ export function MiniBio({ intro, miniBioBullets, socialLinks }: MiniBioProps) {
           ))}
         </div>
         {socialLinks && (
-          <Row>
+          <Row className="social-links">
             {socialLinks.map((link, index) => (
-              <SocialLink
-                key={index}
-                icon={link.icon}
-                to={link.to}
-                label={link.label}
-              />
+              <Col xs={3} className="social-link">
+                <SocialLink
+                  key={index}
+                  icon={link.icon}
+                  to={link.to}
+                  label={link.label}
+                />
+              </Col>
             ))}
           </Row>
         )}

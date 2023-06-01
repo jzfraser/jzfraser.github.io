@@ -1,7 +1,10 @@
 @import "../App";
 
 .home {
-  padding-top: 20vh;
+  min-height: calc(100vh - 175px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .handwave {
