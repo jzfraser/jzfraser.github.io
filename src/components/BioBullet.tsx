@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-export type BioBulletProps = {
+export type MiniBioBulletProps = {
   icon: ReactNode;
   text: string;
 };
 
-export function BioBullet({ icon, text }: BioBulletProps) {
+export function MiniBioBullet({ icon, text }: MiniBioBulletProps) {
   return (
     <Container fluid>
       <Row>

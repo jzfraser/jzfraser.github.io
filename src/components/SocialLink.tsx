@@ -9,7 +9,7 @@ export type SocialLinkProps = {
 
 export function SocialLink({ icon, to, label }: SocialLinkProps) {
   return (
-    <Col>
+    <Col className="social-link">
       <a
         className="social-icon"
         target="_blank"

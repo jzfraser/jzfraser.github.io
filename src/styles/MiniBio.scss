@@ -1,0 +1,55 @@
+@import "../App";
+
+.bio {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    @media only screen and (min-width: 940px) {
+      font-size: 3rem;
+      text-align: left;
+    }
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    text-align: center;
+    @media only screen and (min-width: 940px) {
+      font-size: 2rem;
+      text-align: left;
+    }
+  }
+}
+
+.bio-container {
+  text-align: left;
+  color: white;
+}
+
+.bio-contents {
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.bio-bullet {
+  margin-right: 0.75rem;
+  color: $lightBlue;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  color: white;
+
+  &:hover {
+    color: $lightBlue;
+  }
+}

@@ -30,8 +30,8 @@ const links: Link[] = [
     variant: "initials",
   },
   {
-    name: "skills",
-    to: "/skills",
+    name: "pets",
+    to: "/pets",
   },
   {
     name: "projects",

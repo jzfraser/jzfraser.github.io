@@ -5,19 +5,23 @@ import {
   Keyboard,
   Language,
   LinkedIn,
-  SportsEsports,
+  Psychology,
   Wifi,
 } from "@mui/icons-material";
 import { Col, Container, Row } from "react-bootstrap";
 
-import { BioBullet, BioBulletProps } from "../components/BioBullet";
-import { SocialLink, SocialLinkProps } from "../components/SocialLink";
+import { Avatar } from "../components/Avatar";
+import { MiniBio } from "../components/MiniBio";
 import me from "../img/Me.png";
 
-const bioBullets: BioBulletProps[] = [
+const miniBioBullets = [
   {
     icon: <Keyboard />,
     text: "Lover of Vi, Vim, and especially Neovim",
+  },
+  {
+    icon: <Psychology />,
+    text: "Powerful drive for learning",
   },
   {
     icon: <Wifi />,
@@ -27,13 +31,9 @@ const bioBullets: BioBulletProps[] = [
     icon: <Language />,
     text: "Fluent in German",
   },
-  {
-    icon: <SportsEsports />,
-    text: "Play a wide variety of video games",
-  },
 ];
 
-const socialLinks: SocialLinkProps[] = [
+const socialLinks = [
   {
     icon: <GitHub fontSize="large" />,
     to: "https://github.com/jzfraser",
@@ -47,43 +47,28 @@ const socialLinks: SocialLinkProps[] = [
 ];
 
 export function Home() {
+  const intro = (
+    <>
+      <h1>
+        Hi, I'm <span className="gradient-text">Jack</span>{" "}
+        <span className="handwave">👋</span>
+      </h1>
+      <h2>I do Full Stack Dev and more.</h2>
+    </>
+  );
+
   return (
     <Container className="home">
       <Row>
         <Col lg>
-          <div className="home-contents">
-            <img src={me} alt="image of me smiling" />
-          </div>
+          <Avatar imgSrc={me} />
         </Col>
         <Col lg>
-          <div className="home-container">
-            <div className="home-contents">
-              <h1>
-                Hi, I'm <span className="gradient-text">Jack</span>{" "}
-                <span className="handwave">👋</span>
-              </h1>
-              <h2>I do Full Stack Dev and more.</h2>
-              <div className="bio">
-                {bioBullets.map((bullet, index) => (
-                  <BioBullet
-                    key={index}
-                    icon={bullet.icon}
-                    text={bullet.text}
-                  />
-                ))}
-              </div>
-              <Row>
-                {socialLinks.map((link, index) => (
-                  <SocialLink
-                    key={index}
-                    icon={link.icon}
-                    to={link.to}
-                    label={link.label}
-                  />
-                ))}
-              </Row>
-            </div>
-          </div>
+          <MiniBio
+            intro={intro}
+            miniBioBullets={miniBioBullets}
+            socialLinks={socialLinks}
+          />
         </Col>
       </Row>
     </Container>
