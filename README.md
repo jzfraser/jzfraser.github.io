@@ -1,8 +1,8 @@
 # Portfoliolio
 
-This is currently a work in progress, but is going to end up being my portfolio site once it is finished.
+This is my portfolio site, still a bit of a work in progress but very near done.
 
-I plan on hosting it using GitHub pages at that point.
+I am hosting it using GitHub pages.
 
 # Inspiration
 
