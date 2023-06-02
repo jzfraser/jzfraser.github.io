@@ -43,20 +43,21 @@ const woofBullets = [
 export function PetBios() {
   return (
     <Container className="pets">
-      <Row>
-        <Col lg>
+      <Row className="pet">
+        <Col lg className="pet-left">
           <Avatar imgSrc={meow} />
         </Col>
         <Col lg>
           <MiniBio intro={meowIntro} miniBioBullets={meowBullets} />
         </Col>
       </Row>
-      <Row>
+      <Row className="pet">
         <Col
+          className="pet-left"
           xs={{ order: "last" }}
           sm={{ order: "last" }}
           md={{ order: "last" }}
-          lg={{ span: "auto", order: "first" }}
+          lg={{ span: 6, order: "first" }}
         >
           <MiniBio intro={woofIntro} miniBioBullets={woofBullets} />
         </Col>

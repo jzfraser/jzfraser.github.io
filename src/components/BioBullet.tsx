@@ -13,7 +13,7 @@ export function MiniBioBullet({ icon, text }: MiniBioBulletProps) {
         <Col xs={1} className="bio-bullet">
           {icon}
         </Col>
-        <Col>{text}</Col>
+        <Col className="bio-text">{text}</Col>
       </Row>
     </Container>
   );
