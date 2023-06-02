@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 import { ErrorPage } from "./components/ErrorPage";
 import { About } from "./routes/About";
@@ -7,7 +7,7 @@ import { PetBios } from "./routes/Pets";
 import { Projects } from "./routes/Projects";
 import { Root } from "./routes/Root";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
