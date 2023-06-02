@@ -36,3 +36,13 @@
     font-size: 3rem;
   }
 }
+
+.initials {
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
+
+.hamburger {
+  background-image: $gradient;
+}

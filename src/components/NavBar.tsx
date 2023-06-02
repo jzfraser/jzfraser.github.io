@@ -43,13 +43,14 @@ export function NavBar() {
   const path = pathname === "/" ? "home" : removeLeadingSlash(pathname);
 
   return (
-    <Navbar expand="sm" collapseOnSelect className="navbar">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar expand="sm" collapseOnSelect>
+      <Navbar.Toggle className="hamburger" aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="nav">
         <Nav className="nav">
           {links.map((link, index) => {
-            const linkClassNames = `navlink ${link.variant ? link.variant : ""
-              }`;
+            const linkClassNames = `navlink ${
+              link.variant ? link.variant : ""
+            }`;
             return (
               <Nav.Link
                 eventKey={index}
