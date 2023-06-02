@@ -59,8 +59,13 @@ export function Projects() {
   return (
     <Container className="projects">
       <Row className="project-row">
-        {projects.map((p) => (
-          <Project imgSrc={p.imgSrc} title={p.title} link={p.link} />
+        {projects.map((p, index) => (
+          <Project
+            key={index}
+            imgSrc={p.imgSrc}
+            title={p.title}
+            link={p.link}
+          />
         ))}
       </Row>
     </Container>

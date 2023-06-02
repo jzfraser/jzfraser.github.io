@@ -25,13 +25,8 @@ export function MiniBio({ intro, miniBioBullets, socialLinks }: MiniBioProps) {
         {socialLinks && (
           <Row className="social-links">
             {socialLinks.map((link, index) => (
-              <Col xs={3} className="social-link">
-                <SocialLink
-                  key={index}
-                  icon={link.icon}
-                  to={link.to}
-                  label={link.label}
-                />
+              <Col xs={3} className="social-link" key={index}>
+                <SocialLink icon={link.icon} to={link.to} label={link.label} />
               </Col>
             ))}
           </Row>

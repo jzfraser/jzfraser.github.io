@@ -1,6 +1,5 @@
 import "../styles/NavBar.scss";
 
-import { useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 
@@ -41,9 +40,7 @@ const links: Link[] = [
 
 export function NavBar() {
   const { pathname } = useLocation();
-  const [isActive, setIsActive] = useState(
-    pathname === "/" ? "home" : removeLeadingSlash(pathname)
-  );
+  const path = pathname === "/" ? "home" : removeLeadingSlash(pathname);
 
   return (
     <Navbar expand="sm" collapseOnSelect className="navbar">
@@ -51,9 +48,8 @@ export function NavBar() {
       <Navbar.Collapse id="basic-navbar-nav" className="nav">
         <Nav className="nav">
           {links.map((link, index) => {
-            const linkClassNames = `navlink ${
-              isActive === link.name ? "active" : ""
-            } ${link.variant ? link.variant : ""}`;
+            const linkClassNames = `navlink ${link.variant ? link.variant : ""
+              }`;
             return (
               <Nav.Link
                 eventKey={index}
@@ -61,7 +57,7 @@ export function NavBar() {
                 className={linkClassNames}
                 as={Link}
                 to={link.to}
-                onClick={() => setIsActive(removeLeadingSlash(link.to))}
+                active={link.name === "jf" ? false : link.name === path}
               >
                 {link.variant ? (
                   <h1 className="gradient-text">{link.name}</h1>
