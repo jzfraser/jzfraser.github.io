@@ -1,7 +1,7 @@
 import "../styles/NavBar.scss";
 
 import { useState } from "react";
-import { Nav } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 
 function removeLeadingSlash(s: string): string {
@@ -46,26 +46,33 @@ export function NavBar() {
   );
 
   return (
-    <Nav className="nav">
-      {links.map((link, index) => {
-        const linkClassNames = `navlink ${
-          isActive === link.name ? "active" : ""
-        } ${link.variant ? link.variant : ""}`;
-        return (
-          <Link
-            key={index}
-            className={linkClassNames}
-            to={link.to}
-            onClick={() => setIsActive(removeLeadingSlash(link.to))}
-          >
-            {link.variant ? (
-              <h1 className="gradient-text">{link.name}</h1>
-            ) : (
-              link.name
-            )}
-          </Link>
-        );
-      })}
-    </Nav>
+    <Navbar expand="sm" collapseOnSelect className="navbar">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav" className="nav">
+        <Nav className="nav">
+          {links.map((link, index) => {
+            const linkClassNames = `navlink ${
+              isActive === link.name ? "active" : ""
+            } ${link.variant ? link.variant : ""}`;
+            return (
+              <Nav.Link
+                eventKey={index}
+                key={index}
+                className={linkClassNames}
+                as={Link}
+                to={link.to}
+                onClick={() => setIsActive(removeLeadingSlash(link.to))}
+              >
+                {link.variant ? (
+                  <h1 className="gradient-text">{link.name}</h1>
+                ) : (
+                  link.name
+                )}
+              </Nav.Link>
+            );
+          })}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }

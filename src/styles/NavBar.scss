@@ -1,5 +1,11 @@
 @import "../App";
 
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav {
   justify-content: center;
   align-items: center;
@@ -14,7 +20,7 @@
 }
 
 .navlink {
-  color: white;
+  color: white !important;
   font-size: 1rem;
   transition: $transition;
   margin-left: 5vw;
